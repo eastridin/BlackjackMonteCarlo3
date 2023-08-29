@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1{
+font-family: Arial;
+}
+h2{
+font-family: Arial;
+}
+p{
+font-family: Arial;
+}
+ul{
+font-family: Arial;
+}
+</style>
+</head>
+<body>
+<h1>The User Interface</h1>
+<h2>Setup</h2>
+<ul>
+<li>The circles represent each player</li>
+<li>An aqua background indicates that is the current player.</li>
+<li>You can place a bet on the player using the controls at the bottom of the form.</li>
+<li>Betting 0 will mean that the player will not play in the following game of blackjack.</li>
+</ul>
+<br>
+<h2>The game</h2>
+<ul>
+<li>As before, the circles represent players and aqua background represents the current player.</li>
+<li>The valid moves from that point are visible on the controls at the bottom of the screen.</li>
+<li>AI players will play automatically; no controls will be visible to the user.</li>
+<li>Once all players have played their hand(s), the dealer at the top will play.</li>
+<li>The dealer will hit its on its hand until the lowest value of the hand is 16.</li>
+<li>Following the dealers turn, all the player's hands will be evaluated.</li>
+<li>A background of red indicates a loss by the player.</li>
+<li>A background of yellow indicates a draw/push by the player.</li>
+<li>A background of green indicates a win by the player.</li>
+<li>After this, the window returns to its setup state where the balances have been modified accordingly, depending on the results from the previous game.</li>
+<li>The user then initializes another game.</li>
+</ul>
+<br>
+<h2>Settings menu</h2>
+<ul>
+<li>The players tab allows you to modify each player's settings. This includes how many players should play, the type of each player (AI or user), and also allows resetting a player's balance.</li>
+<li>The game tab allows you to modify game settings such as the interval that cards are displayed at.</li>
+<li>The UI tab allows you to modify the way that the game looks, such as by changing the back of the cards.</li>
+</ul>
+<br>
+<h2>Tree Visualiser</h2>
+<ul>
+<li>The tree visualiser is displayed whenever an AI instance of a player makes a move using a Monte Carlo Tree Search.</li>
+<li>This display consists of a tree on the left of the screen. The tree that is shown is the tree of the chosen iteration number of the Monte Carlo Tree Search.</li>
+<li>The displayed tree can be changed by utilised the controls on the right, where you can either use the arrows to move over to the next iteration of the Monte Carlo Tree Search, or you can manually input the iteration number in the text box.</li>
+<li>The display on the right also gives information of the overall Monte Carlo Tree Search, giving you the number of iterations, the best move found by that tree search, and then the overall results of all the tree searches.</li>
+<li>Each node in the tree has information inside of it. The numbers in the form x/y represent the value of that node (x) and the number of visits to that node during the tree search (y)</li>
+<li>Below the numbers, the previous move made by that node's game state is displayed to the user.</li>
+<li>The displayed tree can be interacted with by the user:</li>
+<li>Single clicking on a node will hide all the children from that node from the user. This allows the user to concentrate on certain aspects of the tree at once.</li>
+<li>Double clicking on a node will open a new window which gives the user information about that particular node.</li>
+</ul>
+<br>
+<h2>Node State Visualiser</h2>
+<ul>
+<li>The node state visualiser shows the user the current state of the game at that point.</li>
+<li>The dealer's hand is shown at the top of the screen.</li>
+<li>The player's hand(s) is shown at the bottom of the screen.</li>
+</ul>
+</body>
+</html>

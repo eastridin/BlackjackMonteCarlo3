@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1{
+font-family: Arial;
+}
+h2{
+font-family: Arial;
+}
+p{
+font-family: Arial;
+}
+ul{
+font-family: Arial;
+}
+</style>
+</head>
+<body>
+<h2>Tree Visualiser</h2>
+<ul>
+<li>The tree visualiser is displayed whenever an AI instance of a player makes a move using a Monte Carlo Tree Search.</li>
+<li>This display consists of a tree on the left of the screen. The tree that is shown is the tree of the chosen iteration number of the Monte Carlo Tree Search of the chosen move of the chosen player.</li>
+<li>The displayed tree can be changed by utilising the controls on the right, where you can either use the arrows to move over to the next iteration of the Monte Carlo Tree Search, or you can manually input the iteration number in the text box.</li>
+<li>Additionally, you can select which AI player and which move to view the trees of.</li>
+<li>The display on the right also gives information of the overall decision process, giving you the number of tree searches that took place, the best move found by the currently chosen tree search, and then the overall results of all the tree searches.</li>
+<li>Each node in the tree has information inside of it. The numbers in the form x/y represent the value of that node (x) and the number of visits to that node during the tree search (y)</li>
+<li>Below the numbers, the previous move made by that node's game state is displayed to the user.</li>
+<li>The displayed tree can be interacted with by the user:</li>
+<li>Single clicking on a node will hide all the children from that node from the user. This allows the user to concentrate on certain aspects of the tree at once.</li>
+<li>Double clicking on a node will open a new window which gives the user information about that particular node.</li>
+</ul>
+</body>
+</html>

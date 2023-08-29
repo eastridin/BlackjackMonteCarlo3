@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BlackjackMonteCarlo2.Common.Hand">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAKAAAAAAAAAAAAAAAAAAIAAgCAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Common\Hand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackjackMonteCarlo2.Common.DealerHand">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\Hand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackjackMonteCarlo2.Common.PlayerHand">
+    <Position X="4.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAgAAAACAAAAQAQAAAAAAAAAAAAQAQAAAAA=</HashCode>
+      <FileName>Common\Hand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackjackMonteCarlo2.Common.Node">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEARAAAAAAAAEAAAABCAIAQAgAAAAAAA=</HashCode>
+      <FileName>Common\Node.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackjackMonteCarlo2.Common.Player">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAABAAAAACAACAAAAEAQAAAAAJAAAAAEAAAAA=</HashCode>
+      <FileName>Common\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackjackMonteCarlo2.Common.User">
+    <Position X="11.75" Y="4" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="BlackjackMonteCarlo2.Common.User.UserTakeTurnHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Common\Player.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackjackMonteCarlo2.Common.AI">
+    <Position X="9.75" Y="2.25" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="BlackjackMonteCarlo2.Common.AI.TreeSearchCompleteHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Common\Player.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAABAAAAAAAAAAAAABAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Common\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackjackMonteCarlo2.Common.RandomNumGen">
+    <Position X="9.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAQAAAAAABAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\RandomNumGen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackjackMonteCarlo2.Common.MCTS">
+    <Position X="6.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAIAEAAAAAAAAAABAACAQAAAAAI=</HashCode>
+      <FileName>Common\MCTS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackjackMonteCarlo2.Common.PlayerInfo">
+    <Position X="13.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Common\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

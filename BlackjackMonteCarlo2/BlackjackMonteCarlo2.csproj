@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{10425D67-36EC-48CD-8E1F-1E969E96B147}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>BlackjackMonteCarlo2</RootNamespace>
+    <AssemblyName>BlackjackMonteCarlo2</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Card.cs" />
+    <Compile Include="Common\Hand.cs" />
+    <Compile Include="Common\MCTS.cs" />
+    <Compile Include="Common\Node.cs" />
+    <Compile Include="Common\Player.cs" />
+    <Compile Include="Common\RandomNumGen.cs" />
+    <Compile Include="Game\GameSave.cs" />
+    <Compile Include="GUI\DisplayCards.cs" />
+    <Compile Include="GUI\GameWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GameWindow.Designer.cs">
+      <DependentUpon>GameWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Cards.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cards.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Game\Game.cs" />
+    <Compile Include="Game\GameState.cs" />
+    <Compile Include="GUI\HelpWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HelpWindow.Designer.cs">
+      <DependentUpon>HelpWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Main Menu\BlackjackSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Main Menu\BlackjackSetup.Designer.cs">
+      <DependentUpon>BlackjackSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Main Menu\MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Main Menu\MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Main Menu\SimulateWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Main Menu\SimulateWindow.Designer.cs">
+      <DependentUpon>SimulateWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NodeStateVisualiser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NodeStateVisualiser.Designer.cs">
+      <DependentUpon>NodeStateVisualiser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PlayerSetupControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\PlayerSetupControl.Designer.cs">
+      <DependentUpon>PlayerSetupControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SettingsMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SettingsMenu.Designer.cs">
+      <DependentUpon>SettingsMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TreeVisualiser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\TreeVisualiser.Designer.cs">
+      <DependentUpon>TreeVisualiser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UI.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UI.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <EmbeddedResource Include="GUI\GameWindow.resx">
+      <DependentUpon>GameWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Cards.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Cards.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HelpWindow.resx">
+      <DependentUpon>HelpWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Main Menu\BlackjackSetup.resx">
+      <DependentUpon>BlackjackSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Main Menu\MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Main Menu\SimulateWindow.resx">
+      <DependentUpon>SimulateWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NodeStateVisualiser.resx">
+      <DependentUpon>NodeStateVisualiser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PlayerSetupControl.resx">
+      <DependentUpon>PlayerSetupControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SettingsMenu.resx">
+      <DependentUpon>SettingsMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TreeVisualiser.resx">
+      <DependentUpon>TreeVisualiser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UI.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UI.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Common\ClassDiagram1.cd" />
+    <None Include="Game\ClassDiagram1.cd" />
+    <None Include="GUI\ClassDiagram1.cd" />
+    <None Include="GUI\Main Menu\ClassDiagramz1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\UI\bet_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Clubs\AceClubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Clubs\EightClubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Clubs\FiveClubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Clubs\FourClubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Clubs\JackClubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Clubs\KingClubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Clubs\NineClubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Clubs\QueenClubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Clubs\SevenClubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Clubs\SixClubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Clubs\TenClubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Clubs\ThreeClubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Clubs\TwoClubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Diamonds\AceDiamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Diamonds\EightDiamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Diamonds\FiveDiamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Diamonds\FourDiamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Diamonds\JackDiamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Diamonds\KingDiamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Diamonds\NineDiamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Diamonds\QueenDiamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Diamonds\SevenDiamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Diamonds\SixDiamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Diamonds\TenDiamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Diamonds\ThreeDiamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Diamonds\TwoDiamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Hearts\AceHearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Hearts\EightHearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Hearts\FiveHearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Hearts\FourHearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Hearts\JackHearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Hearts\KingHearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Hearts\NineHearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Hearts\QueenHearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Hearts\SevenHearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Hearts\SixHearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Hearts\TenHearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Hearts\ThreeHearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Hearts\TwoHearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Spades\AceSpades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Spades\EightSpades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Spades\FiveSpades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Spades\FourSpades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Spades\JackSpades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Spades\KingSpades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Spades\NineSpades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Spades\QueenSpades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Spades\SevenSpades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Spades\SixSpades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Spades\TenSpades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Spades\ThreeSpades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Spades\TwoSpades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Back Covers\Emerald.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Back Covers\Peter River.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Back Covers\Pomegranate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cards\Back Covers\Sun Flower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\UI\table_templates.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\UI\table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\UI\circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\UI\button_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\UI\button_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\UI\button_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\double_down_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hit_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skip_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\split_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stick_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HTML\introduction.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HTML\blackjackRules.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HTML\ui.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HTML\mcts.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HTML\ui\gamewindow.html" />
+    <Content Include="HTML\ui\mainmenu.html" />
+    <Content Include="HTML\ui\node.html" />
+    <Content Include="HTML\ui\settings.html" />
+    <Content Include="HTML\ui\tree.html" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

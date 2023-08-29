@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BlackjackMonteCarlo2.Game.Game">
+    <Position X="3.25" Y="0.5" Width="2" />
+    <NestedTypes>
+      <Delegate Name="BlackjackMonteCarlo2.Game.Game.GameEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Game\Game.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="BlackjackMonteCarlo2.Game.Game.DealerEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Game\Game.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="BlackjackMonteCarlo2.Game.Game.DisplayEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Game\Game.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="BlackjackMonteCarlo2.Game.Game.CardAddedHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Game\Game.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="BlackjackMonteCarlo2.Game.Game.PlayerCardAddedHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Game\Game.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>gAQgAADkIACAAAAwDEIEAGFg0ABIEgSSAAHEhNAAESE=</HashCode>
+      <FileName>Game\Game.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackjackMonteCarlo2.Game.GameSave">
+    <Position X="6.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAABAAAAgAGAAAAAAAQAAAAA=</HashCode>
+      <FileName>Game\GameSave.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackjackMonteCarlo2.Game.GameState">
+    <Position X="8.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiAAAAAA=</HashCode>
+      <FileName>Game\GameState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
